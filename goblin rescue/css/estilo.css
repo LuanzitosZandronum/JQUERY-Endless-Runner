@@ -1,0 +1,293 @@
+h1 {
+    font-family: 'Megaten 20XX', Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: purple;
+}
+
+p {
+    font-family: 'Megaten 20XX', Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+#container {
+    width: 950px;
+    height: auto;
+    position: relative;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#fundoGame {
+    width: 950px;
+    height: 630px;
+    background-image: url(../imgs/fundo_game2.png);
+    border-color: black;
+    border-style: solid;
+    background-size: contain;
+}
+
+#jogador {
+    /* width: 226px;
+    height: 66px; */
+    position: absolute;
+    left: 100px;
+    top: 270px;
+    /* background-image: url(../imgs/apache.png); */
+}
+
+#inimigo1{
+    /* width: 256px;
+    height: 107px; */
+    position: absolute;
+    left: 850px;
+    top: 253px;
+    /* background-image: url(../imgs/inimigo1.png); */
+}
+
+#inimigo2{
+    /* width: 256px;
+    height: 107px; */
+    position: absolute;
+    left: 850px;
+    top: 253px;
+    /* background-image: url(../imgs/inimigo1.png); */
+}
+
+.inimigo3{
+    position: absolute;
+    left: 850px;
+}
+
+#amigo {
+    /* width: 44px;
+    height: 51px; */
+    position: absolute;
+    left: 0px;
+    /* background-image: url(../imgs/amigo.png); */
+}
+
+#inicio {
+    width: 350px;
+    height: 430px;
+    background-image: url(../imgs/fundomenu.png);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.disparo {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    background-image: url(../imgs/disparo.png);
+    background-size: contain;
+}
+
+.explosao {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    animation: fumaca .2s steps(3) infinite;
+}
+
+#explosao1 {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    animation: fumaca .2s steps(3) infinite;
+}
+
+#explosao2 {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    animation: fumaca .2s steps(3) infinite;
+}
+
+#explosao3 {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    animation: fumaca .2s steps(3) infinite;
+}
+@keyframes fumaca {
+    from {background-position: 0px;}
+    to {background-position: -480px;}
+}
+
+
+.anima1 {
+    width: 88px;
+    height: 80px;
+    background-image: url(../imgs/goblita.png);
+    animation: play .2s steps(2) infinite;
+    -webkit-animation: play .2s steps(2) infinite;
+}
+
+@keyframes play {
+    from {background-position: 0px;}
+    to {background-position: -176px;}
+}
+
+.anima2 {
+    width: 90px;
+    height: 90px;
+    background-image: url(../imgs/trollJet.png);
+    animation: playInimigo1 .2s steps(2) infinite;
+    -webkit-animation: playInimigo1 .2s steps(2) infinite;
+}
+
+.anima5 {
+    width: 87px;
+    height: 88px;
+    background-image: url(../imgs/yellowOne.png);
+    animation: playInimigo2 .2s steps(2) infinite;
+    -webkit-animation: playInimigo2 .2s steps(2) infinite;
+}
+
+.anima6 {
+    width: 87px;
+    height: 234px;
+    scale: 1.4;
+    background-image: url(../imgs/torturedSoul.png);
+    animation: playInimigo3 .2s steps(2) infinite;
+    -webkit-animation: playInimigo2 .2s steps(2) infinite;
+}
+
+@keyframes playInimigo1 {
+    from {background-position: 0px;}
+    to {background-position: -180px;}
+}
+
+@keyframes playInimigo2 {
+    from {background-position: 0px;}
+    to {background-position: -174px;}
+}
+
+.anima3 {
+    width: 60px;
+    height: 84px;
+    background-image: url(../imgs/goblin.png);
+    animation: play2 0.3s steps(2) infinite;
+}
+
+@keyframes play2 {
+    from {background-position: 0px;}
+    to {background-position: -120px;}
+}
+
+.anima4 {
+    width: 160px;
+    height: 72px;
+    background-image:url(../imgs/explosao.png);
+    animation:play3 .5s steps(7) infinite;
+}
+
+@keyframes play3 {
+from {background-position:0px;}
+to {background-position:-427px;}
+}
+
+#placar {
+    width: 950px;
+    height: 50px;
+    position: absolute;
+    background-color: black;
+    top: 595px;
+}
+
+h2 {
+    font-family: 'Megaten 20XX', Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.indicador {
+    width: 62px;
+    height: 65px;
+    background-image: url(../imgs/aviso.png);
+    background-size: contain;
+    position: absolute;
+    z-index: 9999;
+    opacity: 0; /* Começa invisível */
+    animation: delayAndBlink 6s forwards; /* Animação com atraso e piscando */
+}
+
+@keyframes delayAndBlink {
+    0% {
+        opacity: 0; /* Começa invisível */
+        transform: scale(1);
+    }
+    75% {
+        opacity: 0; /* Permanece invisível nos primeiros 3 segundos */
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1; /* Torna-se visível */
+        transform: scale(1.1);
+    }
+    85% {
+        opacity: 0; /* Invisível novamente */
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1; /* Torna-se visível */
+        transform: scale(1.1);
+    }
+    95% {
+        opacity: 0; /* Invisível novamente */
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1; /* Torna-se visível */
+        transform: scale(1.1);
+    }
+}
+
+#energia {
+    width: 950px;
+    height: 50px;
+    position: absolute;
+    background-color: black;
+    top: -50px;
+    left: 110px;
+}
+
+#energia h2 {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.perigo  {
+    animation: pulsar 1s infinite alternate;
+}
+
+@keyframes pulsar {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.07);}
+    100% {transform: scale(1);}
+}
+
+h3 {
+    font-family: 'Megaten 20XX', Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: purple;
+}
+
+#fim {
+    width: 350px;
+    height: 200px;
+    background-color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+}
